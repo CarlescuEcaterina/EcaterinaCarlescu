@@ -1,0 +1,37 @@
+" Press ? for help
+
+.. (up a dir)
+/Users/wayneeseguin/projects/db0/rvm/rvm/
+▼ binscripts/
+  rvm
+  rvm-auto-ruby*
+  rvm-install*
+  rvm-installer
+  rvm-prompt*
+  rvm-shell*
+  rvmsudo*
+▶ config/
+▶ contrib/
+▶ docs/
+▶ examples/
+▶ gems/
+▶ gemsets/
+▶ help/
+▶ lib/
+▶ man/
+▶ meta/
+▶ patches/
+▶ pkg/
+▶ releases/
+▶ scripts/
+▶ test/
+History.txt
+install* -> /Users/wayneeseguin/projects/db0/rvm/rvm/scripts/install
+LICENCE
+Manifest.txt
+NERD_tree_1
+Rakefile
+README
+README.txt -> /Users/wayneeseguin/projects/db0/rvm/rvm/README
+sha1
+VERSION
