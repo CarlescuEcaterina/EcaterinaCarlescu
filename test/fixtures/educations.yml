@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_education: 1
+  name: MyString
+  start_time: 2012-10-31
+  end_time: 2012-10-31
+  degree: MyString
+  activites: MyText
+
+two:
+  id_education: 1
+  name: MyString
+  start_time: 2012-10-31
+  end_time: 2012-10-31
+  degree: MyString
+  activites: MyText

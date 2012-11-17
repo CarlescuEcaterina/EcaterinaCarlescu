@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_exp: 1
+  start_time: 2012-10-31
+  end_time: 2012-10-31
+  job_title: MyString
+  description: MyText
+
+two:
+  id_exp: 1
+  start_time: 2012-10-31
+  end_time: 2012-10-31
+  job_title: MyString
+  description: MyText

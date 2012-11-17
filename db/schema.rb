@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121024152816) do
+ActiveRecord::Schema.define(:version => 20121114160802) do
+
+  create_table "companies", :force => true do |t|
+    t.integer  "id_company"
+    t.string   "year_founded"
+    t.text     "adress"
+    t.text     "description"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "cvs", :force => true do |t|
     t.text     "about"
@@ -22,12 +31,38 @@ ActiveRecord::Schema.define(:version => 20121024152816) do
     t.datetime "updated_at",    :null => false
   end
 
+  create_table "educations", :force => true do |t|
+    t.integer  "id_education"
+    t.string   "name"
+    t.date     "start_time"
+    t.date     "end_time"
+    t.string   "degree"
+    t.text     "activites"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "experiences", :force => true do |t|
+    t.integer  "id_exp"
+    t.date     "start_time"
+    t.date     "end_time"
+    t.string   "job_title"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
+    t.string   "token"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["token"], :name => "index_users_on_token"
 
 end
