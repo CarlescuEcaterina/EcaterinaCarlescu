@@ -1,6 +1,16 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+def create
+  @user = User.new(params[:user])
+
+   if @user.save
+    sign_in @user
+    flash[:success] = "You're account was successfully created."
+ else 
+  render action:"new"
+end
+end
   def index
     @users = User.all
 
@@ -41,7 +51,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
-   
+      respond_to do |format|
       if @user.save
 
         sign_in @user
@@ -50,7 +60,7 @@ class UsersController < ApplicationController
       else
       render action: "new" 
        
-      
+     end
     end
   end
 

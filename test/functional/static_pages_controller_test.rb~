@@ -15,9 +15,5 @@ class StaticPagesControllerTest < ActionController::TestCase
     get :contact
     assert_response :success
   end
-#tests home page for a title
- test "should have title" do
-  get :home
-  assert_select 'title', "Home"
-end
+
 end

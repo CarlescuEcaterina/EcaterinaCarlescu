@@ -69,6 +69,49 @@ line-height: 1;
   text-decoration: none;
 }
 
+/* footer components*/
+
+footer {
+margin-top: 45px;
+padding-top: 5px;
+border-top: 1px solid #eaeaea;
+color: #FFFFF0;
+}
+
+// footer' links color
+
+footer a {
+color: #FAEBD7;
+}
+
+//link color when hoovered
+footer a:hover {
+color: #F08080;
+}
+
+//small position
+footer small {
+float: left;
+}
+
+//list style and position
+footer ul {
+float: left;
+list-style: none;
+}
+
+//list item position and margin
+footer ul li {
+float: left;
+margin-left: 10px;
+color: black;
+}
+
+footer p {
+float: right;
+color: #F08080;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {

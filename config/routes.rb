@@ -1,5 +1,7 @@
 EcaterinaCarlescu::Application.routes.draw do
 
+  resources :usercontacts
+
   resources :companies
 
   resources :educations
