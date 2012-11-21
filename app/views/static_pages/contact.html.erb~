@@ -1,2 +1,20 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Send e-mail to Katy:</h3>
+
+<form action="MAILTO:kate19912004@yahoo.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name" value="your name" onclick=""><br>
+E-mail:<br>
+<input type="text" name="mail" value="your email" onclick=""><br>
+Comment:<br>
+<input type="text" name="comment" value="your comment" size="50" onclick=""><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+
+</body>
+</html>
+

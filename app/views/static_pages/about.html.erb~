@@ -1,2 +1,15 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>About me</h1>
+<h2>Ecaterina Carlescu</h2>
+<div class = "row">
+  <div class = "span6 offset3">
+	<p>Descriere</p>
+<img src="http://www.facebook.com/photo.php?fbid=531179900242160&set=pb.100000504651056.-2207520000.1353153334&type=3&theater" width="157" height="70" alt="Katy - Daughter0fLove" />
+<a href="http://www.facebook.com/kate19912004">Facebook </a>
+</div>
+</div>
+</body>
+</html>
