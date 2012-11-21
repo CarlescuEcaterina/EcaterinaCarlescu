@@ -6,9 +6,10 @@ def create
 
    if @user.save
     sign_in @user
+    redirect_to @user
     flash[:success] = "You're account was successfully created."
  else 
-  render action:"new"
+  render action: "new"
 end
 end
   def index

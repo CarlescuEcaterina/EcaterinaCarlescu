@@ -13,6 +13,6 @@ RorApp::Aplication.routes.draw do
 	match '/contact', to: 'static_pages#contact'
 
 	match '/signup', to: 'users#new'
-	match '/sign_in', to: 'session#new'
-	match '/sign_out', to: 'session#destroy', via => :delete
+	match '/sign_in', to: 'sessions#new'
+	match '/sign_out', to: 'sessions#destroy', via => :delete
 end
