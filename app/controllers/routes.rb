@@ -15,4 +15,7 @@ RorApp::Aplication.routes.draw do
 	match '/signup', to: 'users#new'
 	match '/sign_in', to: 'sessions#new'
 	match '/sign_out', to: 'sessions#destroy', via => :delete
+<<<<<<< HEAD
 end
+=======
+>>>>>>> 359e36de9458b69d001a13146aade3a3339725c9
