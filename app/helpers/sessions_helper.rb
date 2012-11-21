@@ -1,6 +1,6 @@
 module SessionsHelper
 def sign_in(user)
- cookies.parmanent[:token] = user.token
+ cookies.permanent[:token] = user.token
  self.current_user = user
 end
 

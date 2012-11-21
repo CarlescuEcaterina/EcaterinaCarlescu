@@ -5,11 +5,11 @@ end
 
 def create
   # identify the user
-  user = User.find_by_email(params[:session][:email].downcase)
+  user = User.find_by_email(params[:sessions][:email].downcase)
  
   #if the user exists = find_by_email method returned a value
 
-  if user && user.authentificate(params[:session][:password])
+  if user && user.authenticate(params[:sessions][:password])
   sign_in user
 
   redirect_to root_path
