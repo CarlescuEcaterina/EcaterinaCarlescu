@@ -4,46 +4,25 @@ def new
 end
 
 def create
-<<<<<<< HEAD
- #indentify the user
- user = User.find_by_email(params[:sessions][:email].downcase)
- #if the user exists = find_by_email method returned a value, now check if the passwd match
- if user && user.authenticate(params[:sessions][:password])
-   sign_in user
+
+@user = User.find_by_email(params[:sessions][:email].downcase)
+@cv = @user.cv
+
+ if @user && @user.authenticate(params[:sessions][:password])
+   sign_in @user
    redirect_to root_path
- elsif (!user)
-    flash[:notice] = "An account associated with this email address doesn't exist"
-    render 'new'
- else
-   #if passwd doesn't match
-   flash[:notice] = "You entered the wrong password"
+ elsif (!@user)
+   flash[:notice] = "An account associated with this email address doesn't exist"
    render 'new'
+  else
+    flash[:notice] = "Wrong password"
+    render 'new'
  end
-=======
-  # identify the user
-  user = User.find_by_email(params[:sessions][:email].downcase)
- 
-  #if the user exists = find_by_email method returned a value
-
-  if user && user.authenticate(params[:sessions][:password])
-  sign_in user
-
-  redirect_to root_path
-  elsif (!user)
-flash[:notice]="An account associated with this email address does not exist"
-  render 'new'
-
-else
- flash[:notice]="You entered the wrong password"
- render 'new'
-end
-
->>>>>>> 359e36de9458b69d001a13146aade3a3339725c9
 end
 
 def destroy
-sign_out
-redirect_to root_path
+  sign_out
+  redirect_to root_path
 end
 
 end

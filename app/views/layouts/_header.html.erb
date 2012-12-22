@@ -5,21 +5,19 @@
     <nav>
       <ul class="nav pull-right">
         <li><%= link_to "Home",    root_path %></li>
-<<<<<<< HEAD
+
         <% if signed_in? %>
-        <li><%= link_to "Profile", '#' %></li>
+        <li><%= link_to "Profile", current_user %></li>
         <li id="fat-menu" class="dropdown">.
         <a href="#" class = "dropdown-toggle" data-toggle = "dropdown">Account <b class = "caret">_</b></a>
       <ul class="dropdown-menu">
-      <li><%= link_to 'Settings', '#'%></li>         
+      <li><%= link_to "Settings", '#'%></li>         
       <li><%= link_to "Sign out", sign_out_path, method: "delete" %></li>
-=======
-        <li><%= link_to "Sign in", sign_in_path %></li>
->>>>>>> 359e36de9458b69d001a13146aade3a3339725c9
+
       </ul>
 	</li>
    <%else%>
-    <li><%= link_to "Sign in", '#' %></li>
+    <li><%= link_to "Sign in", sign_in_path %></li>
    <%end%>
      </ul>
      </nav>

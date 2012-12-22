@@ -14,9 +14,17 @@ class User < ActiveRecord::Base
 			uniqueness: {case_sensitive: false}
   validates :password, presence: true, length: {minimum: 8}
   validates :password_confirmation, presence: true
+  before_save {|user| user.email = email.downcase}
+  before_save :create_token 
+
 private
   def create_token
      self.token = SecureRandom.urlsafe_base64
-   end
+  end
+
+public
+  def show_name
+  self.where(:first_name => @user.first_name).select(:last_name)  
+  end
 
 end

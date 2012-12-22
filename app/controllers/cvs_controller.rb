@@ -25,7 +25,7 @@ class CvsController < ApplicationController
   # GET /cvs/new.json
   def new
     @cv = Cv.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @cv }
@@ -44,7 +44,7 @@ class CvsController < ApplicationController
 
     respond_to do |format|
       if @cv.save
-        format.html { redirect_to @cv, notice: 'Cv was successfully created.' }
+        format.html { render 'experiences/new' }
         format.json { render json: @cv, status: :created, location: @cv }
       else
         format.html { render action: "new" }

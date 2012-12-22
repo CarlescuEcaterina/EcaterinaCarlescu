@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
 private
   def create_token
-     self.token = SecureRandom.urlsave_base64
+     self.token = SecureRandom.urlsafe_base64
    end
 
 end

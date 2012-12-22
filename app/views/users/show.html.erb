@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>First name:</b>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <b>Last name:</b>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+<% if @cv.nil? %>
+  <%= render 'cvs/new' %> 
+<% elsif Experience.find_by_cv_id(@user.cv.id).nil? %>
+  <%= render 'experiences/new' %>
+<% elsif Education.find_by_cv_id(@user.cv.id).nil? %>
+  <%= render 'educations/new' %>
+<%else %>
+  <%= render 'cvs/show' %>
+<% end %>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
